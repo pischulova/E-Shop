@@ -6,6 +6,7 @@ package com.besttravelproject.model;
 public class Product {
     String nameEn;
     String nameRu;
+    String name;
     ProductCategory category;
     Country country;
     int price;
@@ -27,6 +28,14 @@ public class Product {
 
     public void setNameRu(String nameRu) {
         this.nameRu = nameRu;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public ProductCategory getCategory() {

@@ -1,7 +1,7 @@
 package com.besttravelproject.command;
 
-import com.besttravelproject.dao.DaoAuth;
 import com.besttravelproject.dao.DaoFactory;
+import com.besttravelproject.dao.DaoUser;
 import com.besttravelproject.model.Administrator;
 import com.besttravelproject.model.Client;
 import com.besttravelproject.model.User;
@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * Created by А on 08.01.15.
@@ -24,13 +25,13 @@ public class AuthCommand implements Command {
         String password = request.getParameter("pass");
         RequestDispatcher requestDispatcher = null;
         if (name!=null && password!= null) {
-            DaoAuth daoAuth = null;
+            DaoUser daoUser = null;
             try {
-                daoAuth = DaoFactory.getDaoAuth();
+                daoUser = DaoFactory.getDaoAuth();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-            String foundUser = daoAuth.findByName(name, password);
+            String foundUser = daoUser.findByName(name, password);
 
             if (foundUser.equals("not found")) {
                 requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/default.jsp");
@@ -40,10 +41,19 @@ public class AuthCommand implements Command {
 
                 if (foundUser.equals("admin")) {
                     user = new Administrator();
-                    requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/admin_main.jsp");
+                    session.setAttribute("isAdmin", "true");
+                    requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/main_admin.jsp");
                 } else if (foundUser.equals("client")) {
                     user = new Client();
-                    requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/client_main.jsp");
+                    List<String> info = daoUser.findUserInfo(name);
+                    if (!info.isEmpty()) {
+                        user.setName(info.get(0));
+                        user.setSurname(info.get(1));
+                        user.setEmail(info.get(2));
+                        user.setPhone(info.get(3));
+                    }
+                    session.setAttribute("isAdmin", "false");
+                    requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/main_client.jsp");
                 }
                 user.setLogin(name);
                 user.setPassword(password);

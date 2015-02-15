@@ -17,9 +17,11 @@
       <column name="client_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="login" sqlType="VARCHAR" length="10" precision="0" nullable="true" jdbcType="12"/>
       <column name="passw" sqlType="VARCHAR" length="10" precision="0" nullable="true" jdbcType="12"/>
-      <column name="client_name" sqlType="VARCHAR" length="30" precision="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12"/>
       <column name="email" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12"/>
       <column name="phone" sqlType="VARCHAR" length="15" precision="0" nullable="true" jdbcType="12"/>
+      <column name="is_bad" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6" def="MA=="/>
+      <column name="surname" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="client_id"/>
       <exported-key name="orders_ibfk_1" table="orders" schema="" catalog="e-shopdb" columns="client_id"/>
     </table>
@@ -30,34 +32,31 @@
       <primary-key name="PRIMARY" columns="country_id"/>
       <exported-key name="products_ibfk_2" table="products" schema="" catalog="e-shopdb" columns="country_id"/>
     </table>
+    <table name="order_contents" schema="" catalog="e-shopdb" type="TABLE">
+      <column name="order_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="product_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <foreign-key name="order_contents_ibfk_1" columns="order_id" ref-table="orders" ref-schema="" ref-catalog="e-shopdb" ref-columns="order_id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="order_contents_ibfk_2" columns="product_id" ref-table="products" ref-schema="" ref-catalog="e-shopdb" ref-columns="product_id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
     <table name="orders" schema="" catalog="e-shopdb" type="TABLE">
       <column name="order_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="order_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
       <column name="client_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="amount" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
-      <column name="product_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="isApproved" sqlType="TINYINT" length="3" precision="0" nullable="false" jdbcType="-6" def="MA=="/>
       <primary-key name="PRIMARY" columns="order_id"/>
       <foreign-key name="orders_ibfk_1" columns="client_id" ref-table="clients" ref-schema="" ref-catalog="e-shopdb" ref-columns="client_id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="orders_ibfk_2" columns="product_id" ref-table="products" ref-schema="" ref-catalog="e-shopdb" ref-columns="product_id" update-rule="3" delete-rule="3" deferrability="2"/>
-    </table>
-    <table name="product_categories" schema="" catalog="e-shopdb" type="TABLE">
-      <column name="category_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="category_name_en" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12"/>
-      <column name="category_name_ru" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="category_id"/>
-      <exported-key name="products_ibfk_1" table="products" schema="" catalog="e-shopdb" columns="category_id"/>
+      <exported-key name="order_contents_ibfk_1" table="order_contents" schema="" catalog="e-shopdb" columns="order_id"/>
     </table>
     <table name="products" schema="" catalog="e-shopdb" type="TABLE">
       <column name="product_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="product_name_en" sqlType="VARCHAR" length="30" precision="0" nullable="true" jdbcType="12"/>
       <column name="product_name_ru" sqlType="VARCHAR" length="30" precision="0" nullable="true" jdbcType="12"/>
-      <column name="category_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="country_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="price" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="product_id"/>
-      <foreign-key name="products_ibfk_1" columns="category_id" ref-table="product_categories" ref-schema="" ref-catalog="e-shopdb" ref-columns="category_id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="products_ibfk_2" columns="country_id" ref-table="countries" ref-schema="" ref-catalog="e-shopdb" ref-columns="country_id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="orders_ibfk_2" table="orders" schema="" catalog="e-shopdb" columns="product_id"/>
+      <exported-key name="order_contents_ibfk_2" table="order_contents" schema="" catalog="e-shopdb" columns="product_id"/>
     </table>
   </data-source>
 </component>

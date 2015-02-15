@@ -7,8 +7,10 @@ public class Client extends User{
     String login;
     String password;
     String name;
+    String surname;
     String email;
     String phone;
+    Boolean isBad;
 
     public Client() {
     }
@@ -37,6 +39,10 @@ public class Client extends User{
         this.name = name;
     }
 
+    public String getSurname() { return surname; }
+
+    public void setSurname(String surname) { this.surname = surname; }
+
     public String getEmail() {
         return email;
     }
@@ -51,5 +57,13 @@ public class Client extends User{
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Boolean getIsBad() {
+        return isBad;
+    }
+
+    public void setIsBad(Boolean isBad) {
+        this.isBad = isBad;
     }
 }

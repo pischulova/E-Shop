@@ -1,16 +1,17 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
-<%@include file="/WEB-INF/jsp/header_client.jsp"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setLocale value="${userLocale}" />
+<fmt:setBundle basename="resources.bundle"/>
 
-<html>
-<body>
+<%@include file="/WEB-INF/layout/header.jsp"%>
+<%@include file="/WEB-INF/layout/menu.jsp"%>
 <div class="center">
     <form action="/auth?command=${"login"}" method="post">
     <fmt:message key="name"/>
-    <input type="text" name="name" required>
+    <input type="text" name="name" required><br/>
     <fmt:message key="pass"/>
-    <input type="text" name="pass" required>
+    <input type="text" name="pass" required><br/>
     <input type="submit" value="ok">
     </form>
 </div>
-</body>
-</html>
+<%@include file="/WEB-INF/layout/footer.jsp"%>

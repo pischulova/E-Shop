@@ -4,7 +4,8 @@
 <fmt:setBundle basename="resources.bundle"/>
 
 <%@include file="/WEB-INF/layout/header.jsp"%>
+<%@include file="/WEB-INF/layout/menu.jsp"%>
 <div class="center">
-    something went wrong
+    <fmt:message key="contact_info"/>
 </div>
 <%@include file="/WEB-INF/layout/footer.jsp"%>

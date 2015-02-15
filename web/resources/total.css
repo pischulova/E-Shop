@@ -7,7 +7,7 @@ div#header {
     text-align: center;
     color: #303030;
     border-bottom: #C8C8C8 solid 1px;
-    background-image: url(resources/3053s.jpg);
+    background-image: url(3053s.jpg);
     background-size: cover;
 }
 
@@ -35,8 +35,7 @@ div#footer {
 ul#top {
     position:absolute;
     top: 150px;
-    right: 0px;
-    align-items: center;
+    text-align: center;
     list-style-type: none;
     margin: auto;
     overflow: hidden;
@@ -45,14 +44,24 @@ ul#top {
 ul#lang {
     position:absolute;
     top: 150px;
-    left: 30%;
+    text-align: center;
     list-style-type: none;
     margin: auto;
     overflow: hidden;
 }
 
-li {
-    float: left;
+ul#side {
+    position:absolute;
+    top: 200px;
+    right: 10px;
+    text-align: center;
+    list-style-type: none;
+    margin: auto;
+    overflow: hidden;
+}
+
+li.top {
+   float: left;
 }
 
 a:link, a:visited {
@@ -83,21 +92,3 @@ div.center {
     color: #303030;
 }
 
-#log {
-    position:absolute;
-    top: 35px;
-    left: 10px;
-    list-style-type: none;
-    overflow: hidden;
-    font-size: 14;
-}
-
-.button {
-    background: transparent;
-    color: #303030;
-    font-family:"times new roman";
-    font-size: 14;
-    text-transform: uppercase;
-    width:60px;
-    height:26px
- }

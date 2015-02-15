@@ -1,11 +1,11 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
-<%@include file="/WEB-INF/jsp/header_client.jsp"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setLocale value="${userLocale}" />
+<fmt:setBundle basename="resources.bundle"/>
 
-<html>
-
-<body>
+<%@include file="/WEB-INF/layout/header.jsp"%>
+<%@include file="/WEB-INF/layout/menu.jsp"%>
 <div class="center">
-    <fmt:message key="welcome_text"/><br>
+    <fmt:message key="welcome_text"/>
 </div>
-</body>
-</html>
+<%@include file="/WEB-INF/layout/footer.jsp"%>
