@@ -31,13 +31,15 @@
     </form>
 
     <table>
-        <tr>
-            <th><fmt:message key="country"/></th>
-            <th><fmt:message key="destination"/></th>
-            <th><fmt:message key="price"/></th>
-        </tr>
+        <c:if test="${not empty requestScope.flightsList}">
+            <tr>
+                <th><fmt:message key="country"/></th>
+                <th><fmt:message key="destination"/></th>
+                <th><fmt:message key="price"/></th>
+            </tr>
+        </c:if>
 
-        <c:forEach var="flight" items="${flightsList}">
+        <c:forEach var="flight" items="${requestScope.flightsList}">
             <tr>
                 <td>
                     <c:out value="${flight.country.name}" />
@@ -47,6 +49,21 @@
                 </td>
                 <td>
                     <c:out value="${flight.price}" />
+                </td>
+                <td>
+
+                        <c:if test="${sessionScope.isAdmin=='true'}">
+                            <form action="/edit_flight" method="post">
+                                <input type="submit" value="<fmt:message key="edit"/>">
+                                <input type="hidden" name="command" value="edit_flight">
+                            </form>
+                        </c:if>
+                        <c:if test="${sessionScope.isAdmin=='false'}">
+                            <form action="/cart" method="post">
+                                <input type="submit" value="<fmt:message key="add_to_cart"/>">
+                            </form>
+                        </c:if>
+
                 </td>
             </tr>
         </c:forEach>

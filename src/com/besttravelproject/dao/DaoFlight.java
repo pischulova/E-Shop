@@ -21,11 +21,11 @@ public class DaoFlight {
     final static ResourceBundle resourceBundle = ResourceBundle.getBundle("resources/sql_statements");
 
     final static String FIND_FLIGHT_BY_COUNTRY_EN = resourceBundle.getString("FIND_FLIGHT_BY_COUNTRY_EN");
-    final static String FIND_FLIGHT_BY_CITY_EN = resourceBundle.getString("FIND_FLIGHT_BY_COUNTRY_EN");
-    final static String FIND_ALL_FLIGHTS_EN = resourceBundle.getString("FIND_FLIGHT_BY_COUNTRY_EN");
+    final static String FIND_FLIGHT_BY_CITY_EN = resourceBundle.getString("FIND_FLIGHT_BY_CITY_EN");
+    final static String FIND_ALL_FLIGHTS_EN = resourceBundle.getString("FIND_ALL_FLIGHTS_EN");
     final static String FIND_FLIGHT_BY_COUNTRY_RU = resourceBundle.getString("FIND_FLIGHT_BY_COUNTRY_RU");
-    final static String FIND_FLIGHT_BY_CITY_RU = resourceBundle.getString("FIND_FLIGHT_BY_COUNTRY_RU");
-    final static String FIND_ALL_FLIGHTS_RU = resourceBundle.getString("FIND_FLIGHT_BY_COUNTRY_RU");
+    final static String FIND_FLIGHT_BY_CITY_RU = resourceBundle.getString("FIND_FLIGHT_BY_CITY_RU");
+    final static String FIND_ALL_FLIGHTS_RU = resourceBundle.getString("FIND_ALL_FLIGHTS_RU");
     String language = Locale.getDefault().getLanguage();
 
     public DaoFlight() {
@@ -44,7 +44,6 @@ public class DaoFlight {
             } else {
                 statement = connection.prepareStatement(FIND_FLIGHT_BY_COUNTRY_RU);
             }
-            System.out.println(statement + " " + country);
             statement.setString(1, country);
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()) {
@@ -54,6 +53,7 @@ public class DaoFlight {
                 p.setCountry(c);
                 p.setName(resultSet.getString(2));
                 p.setPrice(resultSet.getInt(3));
+                p.setId(resultSet.getInt(4));
                 list.add(p);
             }
         } catch (SQLException e) {
@@ -64,7 +64,28 @@ public class DaoFlight {
 
     public List<Product> findByCity(String city) {
         List<Product> list = new ArrayList<>();
-
+        try {
+            PreparedStatement statement;
+            if (language.equals("en")) {
+                statement = connection.prepareStatement(FIND_FLIGHT_BY_CITY_EN);
+            } else {
+                statement = connection.prepareStatement(FIND_FLIGHT_BY_CITY_RU);
+            }
+            statement.setString(1, "%" + city + "%");
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()) {
+                Country c = new Country();
+                c.setName(resultSet.getString(1));
+                Product p = new Product();
+                p.setCountry(c);
+                p.setName(resultSet.getString(2));
+                p.setPrice(resultSet.getInt(3));
+                p.setId(resultSet.getInt(4));
+                list.add(p);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return list;
     }
 
@@ -85,6 +106,7 @@ public class DaoFlight {
                 p.setCountry(c);
                 p.setName(resultSet.getString(2));
                 p.setPrice(resultSet.getInt(3));
+                p.setId(resultSet.getInt(4));
                 list.add(p);
             }
         } catch (SQLException e) {

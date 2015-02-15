@@ -2,45 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8e1f68-f8af-4de5-9f73-24da43e72574" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/besttravelproject/dao/DaoFlight.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/besttravelproject/command/FlightCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/besttravelproject/command/LogoutCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/cart.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/clients.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/contact.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/flights.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/layout/footer.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/layout/menu.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/layout/menu_admin.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/layout/menu_start.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/orders.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/profile.jsp" />
-      <change type="MOVED" beforePath="C:\Users\А\IdeaProjects\E-Shop\src\com\besttravelproject\dao\DaoAuth.java" afterPath="$PROJECT_DIR$/src/com/besttravelproject/dao/DaoUser.java" />
-      <change type="MOVED" beforePath="C:\Users\А\IdeaProjects\E-Shop\web\WEB-INF\jsp\admin_main.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/main_admin.jsp" />
-      <change type="MOVED" beforePath="C:\Users\А\IdeaProjects\E-Shop\web\WEB-INF\jsp\client_main.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/main_client.jsp" />
-      <change type="MOVED" beforePath="C:\Users\А\IdeaProjects\E-Shop\web\WEB-INF\jsp\header_admin.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/layout/header.jsp" />
-      <change type="MOVED" beforePath="C:\Users\А\IdeaProjects\E-Shop\web\WEB-INF\jsp\header_client.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/layout/menu_client.jsp" />
-      <change type="MOVED" beforePath="C:\Users\А\IdeaProjects\E-Shop\web\header.css" afterPath="$PROJECT_DIR$/web/resources/total.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/besttravelproject/command/AuthCommand.java" afterPath="$PROJECT_DIR$/src/com/besttravelproject/command/AuthCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/besttravelproject/model/Client.java" afterPath="$PROJECT_DIR$/src/com/besttravelproject/model/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/besttravelproject/command/CommandFactory.java" afterPath="$PROJECT_DIR$/src/com/besttravelproject/command/CommandFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/besttravelproject/model/Country.java" afterPath="$PROJECT_DIR$/src/com/besttravelproject/model/Country.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/besttravelproject/dao/DaoFactory.java" afterPath="$PROJECT_DIR$/src/com/besttravelproject/dao/DaoFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/besttravelproject/dao/DaoFlight.java" afterPath="$PROJECT_DIR$/src/com/besttravelproject/dao/DaoFlight.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/besttravelproject/command/FlightCommand.java" afterPath="$PROJECT_DIR$/src/com/besttravelproject/command/FlightCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/besttravelproject/model/Product.java" afterPath="$PROJECT_DIR$/src/com/besttravelproject/model/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/besttravelproject/model/User.java" afterPath="$PROJECT_DIR$/src/com/besttravelproject/model/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/bundle_en.properties" afterPath="$PROJECT_DIR$/src/resources/bundle_en.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/bundle_ru.properties" afterPath="$PROJECT_DIR$/src/resources/bundle_ru.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/createDB.sql" afterPath="$PROJECT_DIR$/src/resources/createDB.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/default.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/default.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/home.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/flights.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/flights.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sql_statements.properties" afterPath="$PROJECT_DIR$/src/resources/sql_statements.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="E-Shop.iws" />
@@ -74,8 +42,8 @@
         <option name="CONDITION_ENABLED" value="true" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -91,8 +59,8 @@
         <option name="CONDITION_ENABLED" value="true" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
@@ -108,16 +76,25 @@
       <file leaf-file-name="flights.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/flights.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="50" selection-start="1078" selection-end="1078" vertical-scroll-proportion="-2.6153846" vertical-offset="255" max-vertical-offset="1037">
+            <state line="28" column="20" selection-start="1836" selection-end="1836" vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="1326">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlightCommand.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/command/FlightCommand.java">
+      <file leaf-file-name="Controller.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="34" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.36286202" vertical-offset="93" max-vertical-offset="731">
+            <state line="16" column="35" selection-start="580" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="510">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DaoFactory.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/dao/DaoFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="0" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.86541736" vertical-offset="104" max-vertical-offset="714">
               <folding />
             </state>
           </provider>
@@ -126,10 +103,17 @@
       <file leaf-file-name="DaoFlight.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/dao/DaoFlight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="56" selection-start="1823" selection-end="1823" vertical-scroll-proportion="0.0" vertical-offset="1096" max-vertical-offset="1683">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="31" column="5" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="2091">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlightCommand.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/command/FlightCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="0" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="901">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -187,17 +171,17 @@
         <option value="dbtable:/f1108a64/f77294ce-7403-4976-b515-797bfb4d0ac5/e-shopdb..products" />
         <option value="$PROJECT_DIR$/src/com/besttravelproject/command/CommandFactory.java" />
         <option value="dbtable:/f1108a64/f77294ce-7403-4976-b515-797bfb4d0ac5/e-shopdb..countries" />
-        <option value="$PROJECT_DIR$/src/com/besttravelproject/dao/DaoFactory.java" />
         <option value="$PROJECT_DIR$/src/com/besttravelproject/model/Country.java" />
-        <option value="$PROJECT_DIR$/src/com/besttravelproject/model/Product.java" />
-        <option value="$PROJECT_DIR$/src/resources/sql_statements.properties" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/default.jsp" />
-        <option value="$PROJECT_DIR$/src/com/besttravelproject/dao/DaoFlight.java" />
         <option value="dbtable:/f1108a64/f77294ce-7403-4976-b515-797bfb4d0ac5/e-shopdb..clients" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/flights.jsp" />
+        <option value="$PROJECT_DIR$/src/resources/sql_statements.properties" />
+        <option value="$PROJECT_DIR$/src/com/besttravelproject/model/Product.java" />
+        <option value="$PROJECT_DIR$/src/com/besttravelproject/dao/DaoFlight.java" />
         <option value="$PROJECT_DIR$/src/resources/bundle_en.properties" />
         <option value="$PROJECT_DIR$/src/resources/bundle_ru.properties" />
         <option value="$PROJECT_DIR$/src/com/besttravelproject/command/FlightCommand.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/flights.jsp" />
+        <option value="$PROJECT_DIR$/src/com/besttravelproject/dao/DaoFactory.java" />
       </list>
     </option>
   </component>
@@ -250,6 +234,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -360,6 +345,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -493,7 +482,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -793,6 +781,31 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
       <option name="LOCAL" value="false" />
       <deployment />
@@ -811,31 +824,6 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="false" name="Tomcat 8.0.15" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.15" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
@@ -967,12 +955,18 @@
       <workItem from="1423898808027" duration="575000" />
       <workItem from="1423902003288" duration="4544000" />
       <workItem from="1423907502329" duration="7034000" />
-      <workItem from="1423989463974" duration="21663000" />
+      <workItem from="1423989463974" duration="29380000" />
+      <workItem from="1424035545036" duration="317000" />
     </task>
+    <task id="LOCAL-00001" summary="DAO, SQL statements, flight search">
+      <created>1424015309299</created>
+      <updated>1424015309299</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183164000" />
+    <option name="totallyTimeSpent" value="191198000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -996,35 +990,35 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16012084" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15030211" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.58401304" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5125786" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1918429" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31973898" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1918429" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17824773" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39314845" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="12" y="477" width="1324" height="202" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.163142" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30016312" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="12" y="477" width="1324" height="202" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1040,50 +1034,21 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="DAO, SQL statements, flight search" />
+    <option name="LAST_COMMIT_MESSAGE" value="DAO, SQL statements, flight search" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_67/jre/lib/resources.jar!/com/sun/org/apache/xml/internal/serializer/output_xml.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="76" selection-end="76" vertical-scroll-proportion="0.33333334" vertical-offset="351" max-vertical-offset="918" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_67/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="744" column="0" selection-start="27686" selection-end="27686" vertical-scroll-proportion="0.33136094" vertical-offset="11963" max-vertical-offset="34255" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/model/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="27" selection-start="277" selection-end="277" vertical-scroll-proportion="0.72148544" vertical-offset="0" max-vertical-offset="680" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/model/ProductCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="442" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/controller/Filter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="129" max-vertical-offset="510" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/model/Administrator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="40" selection-start="115" selection-end="115" vertical-scroll-proportion="0.20716113" vertical-offset="4" max-vertical-offset="442" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="10" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255" />
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_67/src.zip!/java/util/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="82" column="22" selection-start="2915" selection-end="2933" vertical-scroll-proportion="0.39011925" vertical-offset="774" max-vertical-offset="19057" />
@@ -1115,9 +1080,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="984" selection-end="984" vertical-scroll-proportion="0.65384614" vertical-offset="0" max-vertical-offset="697">
-          <folding />
-        </state>
+        <state line="13" column="24" selection-start="984" selection-end="984" vertical-scroll-proportion="0.65384614" vertical-offset="0" max-vertical-offset="697" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/model/Client.java">
@@ -1134,9 +1097,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/resources/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="325">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="325" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/layout/menu_start.jsp">
@@ -1160,13 +1121,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/layout/menu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="10" selection-start="227" selection-end="227" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="357">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/clients.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
@@ -1176,9 +1130,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/resources/total.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="14" selection-start="1408" selection-end="1413" vertical-scroll-proportion="0.9692308" vertical-offset="1113" max-vertical-offset="1700">
-          <folding />
-        </state>
+        <state line="84" column="14" selection-start="1408" selection-end="1413" vertical-scroll-proportion="0.9692308" vertical-offset="1113" max-vertical-offset="1700" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/layout/footer.jsp">
@@ -1244,13 +1196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="72" selection-start="514" selection-end="574" vertical-scroll-proportion="-4.3076925" vertical-offset="75" max-vertical-offset="476">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/command/DefaultCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="87" selection-start="512" selection-end="512" vertical-scroll-proportion="0.16307692" vertical-offset="117" max-vertical-offset="442">
@@ -1261,13 +1206,6 @@
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/dao/DaoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="25" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.8262351" vertical-offset="76" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
@@ -1284,16 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/f1108a64/f77294ce-7403-4976-b515-797bfb4d0ac5/e-shopdb..products">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/profile.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="20" selection-start="825" selection-end="1713" vertical-scroll-proportion="0.8277778" vertical-offset="386" max-vertical-offset="1003">
@@ -1301,32 +1229,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/model/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="29" selection-start="563" selection-end="563" vertical-scroll-proportion="0.54946995" vertical-offset="97" max-vertical-offset="816">
-          <folding>
-            <element signature="e#589#590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/command/AuthCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="92" selection-start="1289" selection-end="1345" vertical-scroll-proportion="0.69590646" vertical-offset="153" max-vertical-offset="1122">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="47" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/command/CommandFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="26" selection-start="603" selection-end="603" vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
@@ -1357,16 +1262,7 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/sql_statements.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272" />
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/f1108a64/f77294ce-7403-4976-b515-797bfb4d0ac5/e-shopdb..countries">
@@ -1374,14 +1270,42 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102" />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f1108a64/f77294ce-7403-4976-b515-797bfb4d0ac5/e-shopdb..products">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/layout/menu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="217" selection-end="593" vertical-scroll-proportion="0.24637681" vertical-offset="0" max-vertical-offset="357">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/flights.jsp">
+    <entry file="file://$PROJECT_DIR$/src/resources/sql_statements.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="50" selection-start="1078" selection-end="1078" vertical-scroll-proportion="-2.6153846" vertical-offset="255" max-vertical-offset="1037">
+        <state line="15" column="32" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/model/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="47" selection-start="348" selection-end="348" vertical-scroll-proportion="0.87061995" vertical-offset="0" max-vertical-offset="867">
+          <folding>
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="72" selection-start="574" selection-end="574" vertical-scroll-proportion="0.32463768" vertical-offset="75" max-vertical-offset="476">
           <folding />
         </state>
       </provider>
@@ -1391,9 +1315,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="18" selection-start="1306" selection-end="1306" vertical-scroll-proportion="-8.24" vertical-offset="491" max-vertical-offset="799">
-          <folding />
-        </state>
+        <state line="43" column="25" selection-start="1344" selection-end="1344" vertical-scroll-proportion="-10.6" vertical-offset="466" max-vertical-offset="833" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/bundle_ru.properties">
@@ -1401,23 +1323,84 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="53" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.8286604" vertical-offset="346" max-vertical-offset="714">
+        <state line="38" column="23" selection-start="1358" selection-end="1358" vertical-scroll-proportion="-11.12" vertical-offset="368" max-vertical-offset="748" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/flights.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="20" selection-start="1836" selection-end="1836" vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="1326">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/command/CommandFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="35" selection-start="580" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/command/FlightCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_67/src.zip!/com/sun/jmx/interceptor/DefaultMBeanServerInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1094" column="0" selection-start="43891" selection-end="43891" vertical-scroll-proportion="0.0" vertical-offset="17084" max-vertical-offset="33694" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_67/src.zip!/javax/management/remote/rmi/RMIConnectionImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="668" column="0" selection-start="24945" selection-end="24945" vertical-scroll-proportion="0.0" vertical-offset="9828" max-vertical-offset="29631" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_67/jre/lib/rt.jar!/sun/rmi/server/UnicastServerRef.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="16" selection-start="1753" selection-end="1753" vertical-scroll-proportion="0.0" vertical-offset="482" max-vertical-offset="1088" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_67/src.zip!/java/net/URLClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="365" column="0" selection-start="13550" selection-end="13550" vertical-scroll-proportion="0.0" vertical-offset="5289" max-vertical-offset="12359" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_67/src.zip!/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="195" column="24" selection-start="6776" selection-end="6776" vertical-scroll-proportion="0.30514705" vertical-offset="2807" max-vertical-offset="7191" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_67/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="270" column="5" selection-start="9872" selection-end="9872" vertical-scroll-proportion="0.066439524" vertical-offset="3429" max-vertical-offset="53992" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="38" selection-start="189" selection-end="189" vertical-scroll-proportion="0.16873449" vertical-offset="0" max-vertical-offset="403">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/dao/DaoFlight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="56" selection-start="1823" selection-end="1823" vertical-scroll-proportion="0.0" vertical-offset="484" max-vertical-offset="1683">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="31" column="5" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0" vertical-offset="784" max-vertical-offset="2057">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/command/FlightCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/besttravelproject/dao/DaoFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="34" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.36286202" vertical-offset="93" max-vertical-offset="731">
+        <state line="39" column="0" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.86541736" vertical-offset="104" max-vertical-offset="714">
           <folding />
         </state>
       </provider>

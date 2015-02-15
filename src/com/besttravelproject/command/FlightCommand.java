@@ -8,7 +8,6 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
@@ -21,7 +20,7 @@ public class FlightCommand implements Command {
     public void execute(HttpServletRequest request, HttpServletResponse response) {
         String country = request.getParameter("country");
         String city = request.getParameter("city");
-        HttpSession session = request.getSession();
+//        HttpSession session = request.getSession();
         try {
             DaoFlight daoFlight = DaoFactory.getDaoFlight();
             List<Product> flights;
@@ -32,7 +31,7 @@ public class FlightCommand implements Command {
             } else {
                 flights = daoFlight.findAll();
             }
-            session.setAttribute("flightsList", flights);
+            request.setAttribute("flightsList", flights);
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/flights.jsp");
             requestDispatcher.forward(request, response);
 
