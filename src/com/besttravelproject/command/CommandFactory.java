@@ -14,7 +14,9 @@ public class CommandFactory {
         commands.put("logout", new LogoutCommand());
         commands.put("default", new DefaultCommand());
         commands.put("language", new LangCommand());
-        commands.put("flights", new FlightCommand());
+        commands.put("show_flights", new ShowFlightsCommand());
+        commands.put("find_flight", new FindFlightCommand());
+        commands.put("edit_flight", new EditFlightCommand());
     }
 
     public static Command createCommand(HttpServletRequest request){
@@ -27,8 +29,12 @@ public class CommandFactory {
                     return commands.get("logout");
                 case "language":
                     return commands.get("language");
-                case "flights":
-                    return commands.get("flights");
+                case "show_flights":
+                    return commands.get("show_flights");
+                case "find_flight":
+                    return commands.get("find_flight");
+                case "edit_flight":
+                    return commands.get("edit_flight");
                 default:
                     return commands.get("default");
             }

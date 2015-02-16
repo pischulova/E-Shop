@@ -21,18 +21,12 @@ public class DaoFactory {
 
     public static DaoUser getDaoAuth() throws SQLException {
         DaoUser daoUser = new DaoUser();
-        if (dataSource.getConnection() == null)
-            System.out.println("datasource is null");
-
         daoUser.setConnection(dataSource.getConnection());
         return daoUser;
     }
 
     public static DaoFlight getDaoFlight() throws SQLException {
         DaoFlight daoFlight = new DaoFlight();
-        if (dataSource.getConnection() == null)
-            System.out.println("datasource is null");
-
         daoFlight.setConnection(dataSource.getConnection());
         return daoFlight;
     }

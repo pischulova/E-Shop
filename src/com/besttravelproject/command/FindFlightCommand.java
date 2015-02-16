@@ -2,6 +2,7 @@ package com.besttravelproject.command;
 
 import com.besttravelproject.dao.DaoFactory;
 import com.besttravelproject.dao.DaoFlight;
+import com.besttravelproject.model.Country;
 import com.besttravelproject.model.Product;
 
 import javax.servlet.RequestDispatcher;
@@ -13,26 +14,22 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * Created by А on 15.02.15.
+ * Created by А on 16.02.15.
  */
-public class FlightCommand implements Command {
+public class FindFlightCommand implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) {
-        String country = request.getParameter("country");
-        String city = request.getParameter("city");
-//        HttpSession session = request.getSession();
+        int flightId = Integer.parseInt(request.getParameter("flight"));
         try {
             DaoFlight daoFlight = DaoFactory.getDaoFlight();
-            List<Product> flights;
-            if (city != null & !city.equals("")) {
-                flights = daoFlight.findByCity(city);
-            } else if (country != null & !country.equals("")) {
-                flights = daoFlight.findByCountry(country);
-            } else {
-                flights = daoFlight.findAll();
+            Product product = null;
+            if (flightId != 0) {
+                product = daoFlight.findProductInfo(flightId);
             }
-            request.setAttribute("flightsList", flights);
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/flights.jsp");
+            request.setAttribute("product", product);
+            List<Country> countries = daoFlight.findAllCountries();
+            request.setAttribute("countriesList", countries);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/edit_flight.jsp");
             requestDispatcher.forward(request, response);
 
         } catch (ServletException e) {
@@ -42,6 +39,5 @@ public class FlightCommand implements Command {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 }

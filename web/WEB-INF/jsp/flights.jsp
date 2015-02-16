@@ -6,6 +6,10 @@
 <%@include file="/WEB-INF/layout/header.jsp"%>
 <%@include file="/WEB-INF/layout/menu.jsp"%>
 <div class="center">
+    <c:if test="${requestScope.flightChanged == 'true'}">
+        The flight was updated successfully.<br>
+    </c:if>
+
     <form action="/auth" method="post">
         <select name="country">
             <option value="">empty</option>
@@ -26,7 +30,7 @@
             <option value="<fmt:message key="Heraklion"/>"><fmt:message key="Heraklion"/></option>
             <option value="<fmt:message key="Thessaloniki"/>"><fmt:message key="Thessaloniki"/></option>
         </select>
-        <input type="hidden" name="command" value="flights">
+        <input type="hidden" name="command" value="show_flights">
         <input type="submit" value="submit">
     </form>
 
@@ -51,23 +55,22 @@
                     <c:out value="${flight.price}" />
                 </td>
                 <td>
-
-                        <c:if test="${sessionScope.isAdmin=='true'}">
-                            <form action="/edit_flight" method="post">
-                                <input type="submit" value="<fmt:message key="edit"/>">
-                                <input type="hidden" name="command" value="edit_flight">
-                            </form>
-                        </c:if>
-                        <c:if test="${sessionScope.isAdmin=='false'}">
-                            <form action="/cart" method="post">
-                                <input type="submit" value="<fmt:message key="add_to_cart"/>">
-                            </form>
-                        </c:if>
-
+                    <c:if test="${sessionScope.isAdmin=='true'}">
+                        <form action="/auth" method="post">
+                            <input type="submit" value="<fmt:message key="edit"/>">
+                            <input type="hidden" name="flight" value="${flight.id}">
+                            <input type="hidden" name="command" value="find_flight">
+                        </form>
+                    </c:if>
+                    <c:if test="${sessionScope.isAdmin=='false'}">
+                        <form action="/cart" method="post">
+                            <input type="submit" value="<fmt:message key="add_to_cart"/>">
+                        </form>
+                    </c:if>
                 </td>
             </tr>
         </c:forEach>
-
     </table>
+
 </div>
 <%@include file="/WEB-INF/layout/footer.jsp"%>

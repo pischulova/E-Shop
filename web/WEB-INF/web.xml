@@ -91,4 +91,22 @@
         <url-pattern>/profile</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>edit_flight</servlet-name>
+        <jsp-file>/WEB-INF/jsp/edit_flight.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>edit_flight</servlet-name>
+        <url-pattern>/edit_flight</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>cart</servlet-name>
+        <jsp-file>/WEB-INF/jsp/cart.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cart</servlet-name>
+        <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+
 </web-app>
