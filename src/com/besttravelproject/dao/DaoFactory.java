@@ -3,6 +3,7 @@ package com.besttravelproject.dao;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
+import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
@@ -19,15 +20,39 @@ public class DaoFactory {
         }
     }
 
-    public static DaoUser getDaoAuth() throws SQLException {
+    public static DaoUser getDaoUser() throws SQLException {
         DaoUser daoUser = new DaoUser();
-        daoUser.setConnection(dataSource.getConnection());
+        Connection connection = dataSource.getConnection();
+        if (connection==null) {
+            System.out.println("Connection ololo");
+        } else
+            daoUser.setConnection(connection);
         return daoUser;
     }
 
     public static DaoFlight getDaoFlight() throws SQLException {
         DaoFlight daoFlight = new DaoFlight();
-        daoFlight.setConnection(dataSource.getConnection());
+        Connection connection = dataSource.getConnection();
+        daoFlight.setConnection(connection);
         return daoFlight;
+    }
+
+    public static DaoOrder getDaoOrder() throws SQLException {
+        DaoOrder daoOrder = new DaoOrder();
+        Connection connection = dataSource.getConnection();
+        daoOrder.setConnection(connection);
+        return daoOrder;
+    }
+
+    public static void closeDaoOrder(DaoOrder daoOrder) {
+        daoOrder.closeConnection();
+    }
+
+    public static void closeDaoUser(DaoUser daoUser) {
+        daoUser.closeConnection();
+    }
+
+    public static void closeDaoFlight(DaoFlight daoFlight) {
+        daoFlight.closeConnection();
     }
 }

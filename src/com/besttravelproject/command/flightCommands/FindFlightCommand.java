@@ -1,5 +1,6 @@
-package com.besttravelproject.command;
+package com.besttravelproject.command.flightCommands;
 
+import com.besttravelproject.command.Command;
 import com.besttravelproject.dao.DaoFactory;
 import com.besttravelproject.dao.DaoFlight;
 import com.besttravelproject.model.Country;
@@ -29,6 +30,7 @@ public class FindFlightCommand implements Command {
             request.setAttribute("product", product);
             List<Country> countries = daoFlight.findAllCountries();
             request.setAttribute("countriesList", countries);
+            DaoFactory.closeDaoFlight(daoFlight);
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/edit_flight.jsp");
             requestDispatcher.forward(request, response);
 

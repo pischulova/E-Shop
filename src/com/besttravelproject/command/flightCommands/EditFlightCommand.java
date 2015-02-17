@@ -1,5 +1,6 @@
-package com.besttravelproject.command;
+package com.besttravelproject.command.flightCommands;
 
+import com.besttravelproject.command.Command;
 import com.besttravelproject.dao.DaoFactory;
 import com.besttravelproject.dao.DaoFlight;
 
@@ -18,7 +19,6 @@ public class EditFlightCommand implements Command {
     public void execute(HttpServletRequest request, HttpServletResponse response) {
         int productId = Integer.parseInt(request.getParameter("productId"));
         String nameEn = request.getParameter("nameEn");
-        System.out.println(nameEn);
         String nameRu = request.getParameter("nameRu");
         int countryId = Integer.parseInt(request.getParameter("countryId"));
         int price = Integer.parseInt(request.getParameter("price"));
@@ -26,6 +26,7 @@ public class EditFlightCommand implements Command {
             DaoFlight daoFlight = DaoFactory.getDaoFlight();
             daoFlight.editFlight(nameEn, nameRu, countryId, price, productId);
             request.setAttribute("flightChanged", "true");
+            DaoFactory.closeDaoFlight(daoFlight);
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/flights.jsp");
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {

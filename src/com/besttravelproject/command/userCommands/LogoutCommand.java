@@ -1,4 +1,6 @@
-package com.besttravelproject.command;
+package com.besttravelproject.command.userCommands;
+
+import com.besttravelproject.command.Command;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

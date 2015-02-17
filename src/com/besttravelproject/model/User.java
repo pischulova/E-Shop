@@ -1,5 +1,7 @@
 package com.besttravelproject.model;
 
+import java.util.List;
+
 /**
  * Created by А on 09.02.15.
  */
@@ -10,6 +12,8 @@ public abstract class User {
     String surname;
     String email;
     String phone;
+    List<Order> orders;
+    List<Product> cart;
 
     public User() {
     }
@@ -58,4 +62,19 @@ public abstract class User {
         this.phone = phone;
     }
 
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+
+    public List<Product> getCart() {
+        return cart;
+    }
+
+    public void setCart(List<Product> cart) {
+        this.cart = cart;
+    }
 }

@@ -21,7 +21,10 @@
 <ul id="side">
     <li><a href="/profile"><fmt:message key="profile"/></a></li>
     <li><a href="/orders"><fmt:message key="orders"/></a></li>
-    <li><a href="/clients"><fmt:message key="clients"/></a></li>
+    <li><a href="javascript:document.clients.submit();"><fmt:message key="clients"/></a>
+        <form action="/auth" method="POST" name="clients">
+            <input type="hidden" name="command" value="show_clients"></form>
+    </li>
 </ul>
 
 </body>

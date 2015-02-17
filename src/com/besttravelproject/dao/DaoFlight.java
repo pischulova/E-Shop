@@ -28,14 +28,22 @@ public class DaoFlight {
     final static String FIND_FLIGHT_BY_CITY_RU = resourceBundle.getString("FIND_FLIGHT_BY_CITY_RU");
     final static String FIND_ALL_FLIGHTS_RU = resourceBundle.getString("FIND_ALL_FLIGHTS_RU");
     final static String FIND_FLIGHT_INFO = resourceBundle.getString("FIND_FLIGHT_INFO");
+    final static String FIND_FLIGHT_INFO_LANG = resourceBundle.getString("FIND_FLIGHT_INFO_LANG");
     final static String FIND_ALL_COUNTRIES = resourceBundle.getString("FIND_ALL_COUNTRIES");
     final static String EDIT_FLIGHT = resourceBundle.getString("EDIT_FLIGHT");
 
-    public DaoFlight() {
-    }
+    public DaoFlight() {}
 
     public void setConnection(Connection connection) {
         this.connection = connection;
+    }
+
+    public void closeConnection() {
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public List<Product> findByCountry(String country) {
@@ -131,6 +139,31 @@ public class DaoFlight {
                 product.setPrice(resultSet.getInt(4));
                 Country country = new Country();
                 country.setId(resultSet.getInt(5));
+                product.setCountry(country);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return product;
+    }
+
+    public Product findProductInfoLang(int id) {
+        Product product = new Product();
+        try {
+            PreparedStatement statement = connection.prepareStatement(FIND_FLIGHT_INFO_LANG);
+            statement.setInt(1, id);
+            ResultSet resultSet = statement.executeQuery();
+            Country country = new Country();
+
+            while(resultSet.next()) {
+                if (language.equals("en")) {
+                    product.setName(resultSet.getString(1));
+                    country.setName(resultSet.getString(4));
+                } else {
+                    product.setName(resultSet.getString(2));
+                    country.setName(resultSet.getString(5));
+                }
+                product.setPrice(resultSet.getInt(3));
                 product.setCountry(country);
             }
         } catch (SQLException e) {

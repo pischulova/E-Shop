@@ -1,5 +1,6 @@
-package com.besttravelproject.command;
+package com.besttravelproject.command.flightCommands;
 
+import com.besttravelproject.command.Command;
 import com.besttravelproject.dao.DaoFactory;
 import com.besttravelproject.dao.DaoFlight;
 import com.besttravelproject.model.Product;
@@ -31,6 +32,7 @@ public class ShowFlightsCommand implements Command {
                 flights = daoFlight.findAll();
             }
             request.setAttribute("flightsList", flights);
+            DaoFactory.closeDaoFlight(daoFlight);
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/flights.jsp");
             requestDispatcher.forward(request, response);
 
@@ -41,6 +43,5 @@ public class ShowFlightsCommand implements Command {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 }

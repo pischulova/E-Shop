@@ -1,5 +1,6 @@
-package com.besttravelproject.command;
+package com.besttravelproject.command.userCommands;
 
+import com.besttravelproject.command.Command;
 import com.besttravelproject.dao.DaoFactory;
 import com.besttravelproject.dao.DaoUser;
 import com.besttravelproject.model.Administrator;
@@ -27,7 +28,7 @@ public class AuthCommand implements Command {
         if (name!=null && password!= null) {
             DaoUser daoUser = null;
             try {
-                daoUser = DaoFactory.getDaoAuth();
+                daoUser = DaoFactory.getDaoUser();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -42,7 +43,6 @@ public class AuthCommand implements Command {
                 if (foundUser.equals("admin")) {
                     user = new Administrator();
                     session.setAttribute("isAdmin", "true");
-                    requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/main_admin.jsp");
                 } else if (foundUser.equals("client")) {
                     user = new Client();
                     List<String> info = daoUser.findUserInfo(name);
@@ -53,11 +53,12 @@ public class AuthCommand implements Command {
                         user.setPhone(info.get(3));
                     }
                     session.setAttribute("isAdmin", "false");
-                    requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/main_client.jsp");
                 }
+                requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/home.jsp");
                 user.setLogin(name);
                 user.setPassword(password);
                 session.setAttribute("user", user);
+                DaoFactory.closeDaoUser(daoUser);
             }
         } else {
             requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/default.jsp");

@@ -63,8 +63,11 @@
                         </form>
                     </c:if>
                     <c:if test="${sessionScope.isAdmin=='false'}">
-                        <form action="/cart" method="post">
+                        <form action="/auth" method="post">
                             <input type="submit" value="<fmt:message key="add_to_cart"/>">
+                            <input type="hidden" name="flightId" value="${flight.id}">
+                            <input type="hidden" name="action" value="add">
+                            <input type="hidden" name="command" value="change_cart">
                         </form>
                     </c:if>
                 </td>
