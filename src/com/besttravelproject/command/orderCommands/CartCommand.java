@@ -28,6 +28,7 @@ public class CartCommand implements Command {
         List<Product> cart = user.getCart();
         if (cart == null)
             cart = new ArrayList<>();
+
         int flightId = Integer.parseInt(request.getParameter("flightId"));
         String action = request.getParameter("action");
 
@@ -57,5 +58,6 @@ public class CartCommand implements Command {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 }

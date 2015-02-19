@@ -61,8 +61,8 @@ public class DaoUser {
         return "not found";
     }
 
-    public List<String> findUserInfo(String name) {
-        List<String> info = new ArrayList<>();
+    public List findUserInfo(String name) {
+        List info = new ArrayList<>();
         try {
             PreparedStatement statement = connection.prepareStatement(FIND_CLIENT_INFO);
             statement.setString(1, name);
@@ -72,6 +72,7 @@ public class DaoUser {
                 info.add(resultSet.getString(2));
                 info.add(resultSet.getString(3));
                 info.add(resultSet.getString(4));
+                info.add(resultSet.getInt(5));
             }
         } catch (SQLException e) {
             e.printStackTrace();

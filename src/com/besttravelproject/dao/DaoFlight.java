@@ -164,6 +164,7 @@ public class DaoFlight {
                     country.setName(resultSet.getString(5));
                 }
                 product.setPrice(resultSet.getInt(3));
+                product.setId(resultSet.getInt(6));
                 product.setCountry(country);
             }
         } catch (SQLException e) {

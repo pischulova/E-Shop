@@ -23,6 +23,7 @@ public class CommandFactory {
         commands.put("show_clients", new ShowClientsCommand());
         commands.put("blacklist", new BlacklistCommand());
         commands.put("change_cart", new CartCommand());
+        commands.put("make_order", new AddOrderCommand());
     }
 
     public static Command createCommand(HttpServletRequest request){
@@ -47,6 +48,8 @@ public class CommandFactory {
                     return commands.get("blacklist");
                 case "change_cart":
                     return commands.get("change_cart");
+                case "make_order":
+                    return commands.get("make_order");
                 default:
                     return commands.get("default");
             }

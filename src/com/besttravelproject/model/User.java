@@ -6,6 +6,7 @@ import java.util.List;
  * Created by А on 09.02.15.
  */
 public abstract class User {
+    int id;
     String login;
     String password;
     String name;
@@ -17,6 +18,10 @@ public abstract class User {
 
     public User() {
     }
+
+    public int getId() { return id; }
+
+    public void setId(int id) { this.id = id; }
 
     public String getLogin() {
         return login;

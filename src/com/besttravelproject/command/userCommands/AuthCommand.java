@@ -45,12 +45,13 @@ public class AuthCommand implements Command {
                     session.setAttribute("isAdmin", "true");
                 } else if (foundUser.equals("client")) {
                     user = new Client();
-                    List<String> info = daoUser.findUserInfo(name);
+                    List info = daoUser.findUserInfo(name);
                     if (!info.isEmpty()) {
-                        user.setName(info.get(0));
-                        user.setSurname(info.get(1));
-                        user.setEmail(info.get(2));
-                        user.setPhone(info.get(3));
+                        user.setName((String)info.get(0));
+                        user.setSurname((String)info.get(1));
+                        user.setEmail((String)info.get(2));
+                        user.setPhone((String)info.get(3));
+                        user.setId((int)info.get(4));
                     }
                     session.setAttribute("isAdmin", "false");
                 }
