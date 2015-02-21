@@ -27,7 +27,7 @@ public class EditFlightCommand implements Command {
             daoFlight.editFlight(nameEn, nameRu, countryId, price, productId);
             request.setAttribute("flightChanged", "true");
             DaoFactory.closeDaoFlight(daoFlight);
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/flights.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/flights");
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();

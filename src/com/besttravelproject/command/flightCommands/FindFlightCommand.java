@@ -31,7 +31,7 @@ public class FindFlightCommand implements Command {
             List<Country> countries = daoFlight.findAllCountries();
             request.setAttribute("countriesList", countries);
             DaoFactory.closeDaoFlight(daoFlight);
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/edit_flight.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/edit_flight");
             requestDispatcher.forward(request, response);
 
         } catch (ServletException e) {

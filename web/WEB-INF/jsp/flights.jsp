@@ -7,19 +7,20 @@
 <%@include file="/WEB-INF/layout/menu.jsp"%>
 <div class="center">
     <c:if test="${requestScope.flightChanged == 'true'}">
-        The flight was updated successfully.<br>
+        <fmt:message key="flight_updated"/><br><br>
     </c:if>
 
     <form action="/auth" method="post">
+        <fmt:message key="choose"/><br>
         <select name="country">
-            <option value="">empty</option>
+            <option value="">-----</option>
             <option value="<fmt:message key="Sweden"/>"><fmt:message key="Sweden"/></option>
             <option value="<fmt:message key="Great_Britain"/>"><fmt:message key="Great_Britain"/></option>
             <option value="<fmt:message key="Sri_Lanka"/>"><fmt:message key="Sri_Lanka"/></option>
             <option value="<fmt:message key="Greece"/>"><fmt:message key="Greece"/></option>
         </select>
         <select name="city">
-            <option value="">empty</option>
+            <option value="">-----</option>
             <option value="<fmt:message key="Stockholm"/>"><fmt:message key="Stockholm"/></option>
             <option value="<fmt:message key="Malmo"/>"><fmt:message key="Malmo"/></option>
             <option value="<fmt:message key="London"/>"><fmt:message key="London"/></option>
@@ -31,7 +32,7 @@
             <option value="<fmt:message key="Thessaloniki"/>"><fmt:message key="Thessaloniki"/></option>
         </select>
         <input type="hidden" name="command" value="show_flights">
-        <input type="submit" value="submit">
+        <input type="submit" value="ok">
     </form>
 
     <table>
@@ -45,15 +46,9 @@
 
         <c:forEach var="flight" items="${requestScope.flightsList}">
             <tr>
-                <td>
-                    <c:out value="${flight.country.name}" />
-                </td>
-                <td>
-                    <c:out value="${flight.name}" />
-                </td>
-                <td>
-                    <c:out value="${flight.price}" />
-                </td>
+                <td><c:out value="${flight.country.name}"/></td>
+                <td><c:out value="${flight.name}"/></td>
+                <td><c:out value="${flight.price}"/></td>
                 <td>
                     <c:if test="${sessionScope.isAdmin=='true'}">
                         <form action="/auth" method="post">

@@ -26,7 +26,7 @@ public class LangCommand implements Command {
         HttpSession session = request.getSession(true);
         session.setAttribute("userLocale", locale);
         Locale.setDefault(locale);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/home.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/home");
         try {
             dispatcher.forward(request, response);
         } catch (ServletException e) {

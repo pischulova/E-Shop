@@ -7,13 +7,18 @@ import java.util.List;
  * Created by А on 08.01.15.
  */
 public class Order {
+    int id;
     Date date;
     Client client;
     int amount;
     List<Product> products;
+    int isApproved;
 
-    public Order() {
-    }
+    public Order() {}
+
+    public int getId() { return id; }
+
+    public void setId(int id) { this.id = id; }
 
     public Date getDate() {
         return date;
@@ -46,4 +51,14 @@ public class Order {
     public void setProducts(List<Product> products) {
         this.products = products;
     }
+
+    public int getIsApproved() {
+        return isApproved;
+    }
+
+    public void setIsApproved(int isApproved) {
+        this.isApproved = isApproved;
+    }
+
+
 }

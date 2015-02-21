@@ -32,12 +32,8 @@
                     <td>${user.password}</td>
                 </tr>
                 <tr>
-                    <td><fmt:message key="firstname"/></td>
+                    <td><fmt:message key="realname"/></td>
                     <td>${user.name}</td>
-                </tr>
-                <tr>
-                    <td><fmt:message key="surname"/></td>
-                    <td>${user.surname}</td>
                 </tr>
                 <tr>
                     <td><fmt:message key="email"/></td>

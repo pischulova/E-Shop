@@ -21,7 +21,6 @@
       <column name="email" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12"/>
       <column name="phone" sqlType="VARCHAR" length="15" precision="0" nullable="true" jdbcType="12"/>
       <column name="is_bad" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6" def="MA=="/>
-      <column name="surname" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="client_id"/>
       <exported-key name="orders_ibfk_1" table="orders" schema="" catalog="e-shopdb" columns="client_id"/>
     </table>

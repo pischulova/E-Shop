@@ -38,6 +38,7 @@ public class AddOrderCommand implements Command {
             }
             cart = new ArrayList<>();
             user.setCart(cart);
+            DaoFactory.closeDaoOrder(daoOrder);
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/cart.jsp");
             requestDispatcher.forward(request, response);
         } catch (SQLException e) {

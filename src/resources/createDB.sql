@@ -2,16 +2,16 @@ create table admins (admin_id int auto_increment, login varchar(10), passw varch
 insert into admins (login, passw) values ('root', 'root'), ('admin', 'admin');
 
 create table clients (client_id int auto_increment, login varchar(10), passw varchar(10), 
-	name varchar(20), surname varchar(20), email varchar(20), phone varchar(15), is_bad boolean default false,
+	name varchar(20), email varchar(20), phone varchar(15), is_bad boolean default false,
   primary key (client_id));
-insert into clients (login, passw, name, surname, email, phone, is_bad) values
-	('alex', 'alex12', 'Alex', 'Ivanov', 'alex@mail.ru', '345890784', 0),
-    ('lola', '1234', 'Lolita', 'Johanson', 'lola@gmail.com', '567209590', 0),
-    ('andrey', 'and', 'Андрей', 'Коваленко', 'andrey@mail.com', '12345093', 0),
-    ('sara', 'aras', 'Sara', 'Goodman', 'sara@mail.ru', '450924575', 1),
-    ('jack', 'jack', 'Jack', 'White', 'jack@gmail.com', '973859258', 1),
-    ('helena', 'lena', 'Helena', 'Brandebovich', 'helena@gmail.com', '884521111', 0),
-    ('den', 'den1', 'Den', 'Brown', 'den@mail.com', '459385760', 0);
+insert into clients (login, passw, name, email, phone, is_bad) values
+	('alex', 'alex12', 'Alex Ivanov', 'alex@mail.ru', '345890784', 0),
+    ('lola', '1234', 'Lolita Johanson', 'lola@gmail.com', '567209590', 0),
+    ('andrey', 'and', 'Андрей Коваленко', 'andrey@mail.com', '12345093', 0),
+    ('sara', 'aras', 'Sara Goodman', 'sara@mail.ru', '450924575', 1),
+    ('jack', 'jack', 'Jack White', 'jack@gmail.com', '973859258', 1),
+    ('helena', 'lena', 'Helena Brandebovich', 'helena@gmail.com', '884521111', 0),
+    ('den', 'den1', 'Den Brown', 'den@mail.com', '459385760', 0);
     
 
 create table countries (country_id int auto_increment, country_name_en varchar(20) NOT NULL, 

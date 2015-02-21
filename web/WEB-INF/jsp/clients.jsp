@@ -7,22 +7,19 @@
 <%@include file="/WEB-INF/layout/menu.jsp"%>
 
 <div class="center">
-    <fmt:message key="clients_list"/>
     <table>
         <tr>
             <th><fmt:message key="client_id"/></th>
-            <th><fmt:message key="firstname"/></th>
-            <th><fmt:message key="surname"/></th>
+            <th><fmt:message key="realname"/></th>
             <th><fmt:message key="email"/></th>
             <th><fmt:message key="phone"/></th>
-            <th><fmt:message key="order_amount"/></th>
+            <th><fmt:message key="orders"/></th>
         </tr>
 
         <c:forEach var="client" items="${requestScope.goodClientsList}">
             <tr>
                 <td><c:out value="${client.id}" /></td>
                 <td><c:out value="${client.name}" /></td>
-                <td><c:out value="${client.surname}" /></td>
                 <td><c:out value="${client.email}" /></td>
                 <td><c:out value="${client.phone}" /></td>
                 <td><c:out value="${client.orderAmount}" /></td>
@@ -36,24 +33,22 @@
                 </td>
             </tr>
         </c:forEach>
-    </table>
+    </table><br>
 
-    <fmt:message key="blacklist"/>
+    <fmt:message key="blacklist"/><br><br>
     <table>
         <tr>
             <th><fmt:message key="client_id"/></th>
-            <th><fmt:message key="firstname"/></th>
-            <th><fmt:message key="surname"/></th>
+            <th><fmt:message key="realname"/></th>
             <th><fmt:message key="email"/></th>
             <th><fmt:message key="phone"/></th>
-            <th><fmt:message key="order_amount"/></th>
+            <th><fmt:message key="orders"/></th>
         </tr>
 
         <c:forEach var="client" items="${requestScope.badClientsList}">
             <tr>
                 <td><c:out value="${client.id}" /></td>
                 <td><c:out value="${client.name}" /></td>
-                <td><c:out value="${client.surname}" /></td>
                 <td><c:out value="${client.email}" /></td>
                 <td><c:out value="${client.phone}" /></td>
                 <td><c:out value="${client.orderAmount}" /></td>

@@ -7,7 +7,7 @@
 <%@include file="/WEB-INF/layout/menu.jsp"%>
 <div class="center">
     <c:if test="${not empty sessionScope.user}">
-         Hello, ${user.login}!<br><br>
+        <fmt:message key="greeting"/> ${user.login}!<br><br>
     </c:if>
     <fmt:message key="welcome_text"/>
 </div>

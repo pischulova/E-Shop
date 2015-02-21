@@ -33,7 +33,7 @@ public class ShowFlightsCommand implements Command {
             }
             request.setAttribute("flightsList", flights);
             DaoFactory.closeDaoFlight(daoFlight);
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/flights.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/flights");
             requestDispatcher.forward(request, response);
 
         } catch (ServletException e) {

@@ -10,7 +10,6 @@ public abstract class User {
     String login;
     String password;
     String name;
-    String surname;
     String email;
     String phone;
     List<Order> orders;
@@ -46,10 +45,6 @@ public abstract class User {
     public void setName(String name) {
         this.name = name;
     }
-
-    public String getSurname() { return surname; }
-
-    public void setSurname(String surname) { this.surname = surname; }
 
     public String getEmail() {
         return email;

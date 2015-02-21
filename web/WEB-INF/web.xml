@@ -17,7 +17,7 @@
 
     <!--Welcome page-->
     <welcome-file-list>
-        <welcome-file>/WEB-INF/jsp/index.jsp</welcome-file>
+        <welcome-file>/WEB-INF/jsp/home.jsp</welcome-file>
     </welcome-file-list>
 
     <!--Encoding filter-->
@@ -74,12 +74,12 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>contact</servlet-name>
-        <jsp-file>/WEB-INF/jsp/contact.jsp</jsp-file>
+        <servlet-name>orders</servlet-name>
+        <jsp-file>/WEB-INF/jsp/orders.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>contact</servlet-name>
-        <url-pattern>/contact</url-pattern>
+        <servlet-name>orders</servlet-name>
+        <url-pattern>/orders</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -116,6 +116,15 @@
     <servlet-mapping>
         <servlet-name>clients</servlet-name>
         <url-pattern>/clients</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>order_info</servlet-name>
+        <jsp-file>/WEB-INF/jsp/order_info.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>order_info</servlet-name>
+        <url-pattern>/order_info</url-pattern>
     </servlet-mapping>
 
 </web-app>

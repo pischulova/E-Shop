@@ -15,7 +15,7 @@ public class LogoutCommand implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) {
         request.getSession().invalidate();
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/home.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/home");
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {

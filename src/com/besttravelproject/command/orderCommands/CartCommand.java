@@ -37,6 +37,7 @@ public class CartCommand implements Command {
                 DaoFlight daoFlight = DaoFactory.getDaoFlight();
                 Product product = daoFlight.findProductInfoLang(flightId);
                 cart.add(product);
+                DaoFactory.closeDaoFlight(daoFlight);
             } catch (SQLException e) {
                 e.printStackTrace();
             }

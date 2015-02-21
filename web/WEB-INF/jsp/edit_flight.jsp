@@ -17,7 +17,7 @@
         <fmt:message key="country_code"/>
         <input type="text" name="countryId" value="${requestScope.product.country.id}"></br>
         <fmt:message key="price"/>
-        <input type="text" name="price" value="${requestScope.product.price}">
+        <input type="text" name="price" value="${requestScope.product.price}"><br><br>
         <input type="submit" value="<fmt:message key="save"/>">
         <input type="hidden" name="command" value="edit_flight">
     </form>

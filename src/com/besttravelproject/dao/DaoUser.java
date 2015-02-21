@@ -1,6 +1,7 @@
 package com.besttravelproject.dao;
 
 import com.besttravelproject.model.Client;
+import com.besttravelproject.model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -39,7 +40,7 @@ public class DaoUser {
         }
     }
 
-    public String findByName(String name, String password) {
+    public String findByNamePass(String name, String password) {
         try {
             PreparedStatement statement1 = connection.prepareStatement(FIND_ADMIN_BY_NAME_PASS);
             statement1.setString(1, name);
@@ -61,23 +62,22 @@ public class DaoUser {
         return "not found";
     }
 
-    public List findUserInfo(String name) {
-        List info = new ArrayList<>();
+    public User findUserInfo(String name) {
+        Client client = new Client();
         try {
             PreparedStatement statement = connection.prepareStatement(FIND_CLIENT_INFO);
             statement.setString(1, name);
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()) {
-                info.add(resultSet.getString(1));
-                info.add(resultSet.getString(2));
-                info.add(resultSet.getString(3));
-                info.add(resultSet.getString(4));
-                info.add(resultSet.getInt(5));
+                client.setName(resultSet.getString(1));
+                client.setEmail(resultSet.getString(2));
+                client.setPhone(resultSet.getString(3));
+                client.setId(resultSet.getInt(4));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return info;
+        return client;
     }
 
     public List<Client> findAllClients(String state) {
@@ -102,9 +102,8 @@ public class DaoUser {
                 }
                 c.setId(id);
                 c.setName(resultSet.getString(2));
-                c.setSurname(resultSet.getString(3));
-                c.setEmail(resultSet.getString(4));
-                c.setPhone(resultSet.getString(5));
+                c.setEmail(resultSet.getString(3));
+                c.setPhone(resultSet.getString(4));
                 c.setOrderAmount(orderCount);
                 list.add(c);
             }

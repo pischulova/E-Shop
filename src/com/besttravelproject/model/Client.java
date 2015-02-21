@@ -8,7 +8,6 @@ public class Client extends User{
     String login;
     String password;
     String name;
-    String surname;
     String email;
     String phone;
     Boolean isBad;
@@ -44,10 +43,6 @@ public class Client extends User{
     public void setName(String name) {
         this.name = name;
     }
-
-    public String getSurname() { return surname; }
-
-    public void setSurname(String surname) { this.surname = surname; }
 
     public String getEmail() {
         return email;

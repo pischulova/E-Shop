@@ -6,7 +6,4 @@
     <script src="/resources/js/main.js"></script>
 </head>
 <body>
-<div id="header">
-    <span class="Centerer"></span>
-    <img class="Centered" src="/resources/logo.png"/>
-</div>
+<div id="header"/>

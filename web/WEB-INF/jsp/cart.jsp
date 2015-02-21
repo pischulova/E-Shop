@@ -42,6 +42,9 @@
                 </tr>
             </table>
 
+            <form action="/flights" method="post">
+                <input type="submit" value="<fmt:message key="continue_shopping"/>">
+            </form>
             <form action="/auth" method="post">
                 <input type="submit" value="<fmt:message key="make_order"/>">
                 <input type="hidden" name="command" value="make_order">
