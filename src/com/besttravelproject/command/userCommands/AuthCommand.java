@@ -6,8 +6,6 @@ import com.besttravelproject.dao.DaoUser;
 import com.besttravelproject.model.Administrator;
 import com.besttravelproject.model.User;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -22,18 +20,15 @@ public class AuthCommand implements Command {
     public void execute(HttpServletRequest request, HttpServletResponse response) {
         String name = request.getParameter("name");
         String password = request.getParameter("pass");
-        RequestDispatcher requestDispatcher;
-        if (name!=null && password!= null) {
-            DaoUser daoUser = null;
-            try {
-                daoUser = DaoFactory.getDaoUser();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        try {
+            DaoUser daoUser = DaoFactory.getDaoUser();
             String foundUser = daoUser.findByNamePass(name, password);
 
             if (foundUser.equals("not found")) {
-                requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/default.jsp");
+                DaoFactory.closeDaoUser(daoUser);
+                HttpSession session = request.getSession();
+                session.setAttribute("error_message", "bad_login");
+                response.sendRedirect("/error");
             } else {
                 HttpSession session = request.getSession(true);
                 User user = null;
@@ -45,18 +40,15 @@ public class AuthCommand implements Command {
                     user = daoUser.findUserInfo(name);
                     session.setAttribute("isAdmin", "false");
                 }
-                requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/home.jsp");
                 user.setLogin(name);
                 user.setPassword(password);
                 session.setAttribute("user", user);
+
                 DaoFactory.closeDaoUser(daoUser);
+                response.sendRedirect("/home");
             }
-        } else {
-            requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/default.jsp");
-        }
-        try {
-            requestDispatcher.forward(request, response);
-        } catch (ServletException e) {
+
+        } catch (SQLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();

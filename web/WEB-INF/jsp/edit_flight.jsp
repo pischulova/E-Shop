@@ -9,15 +9,15 @@
 
     <form action="/auth" method="post">
         <fmt:message key="product_id"/>
-        <input type="text" name="productId" value="${requestScope.product.id}" readonly></br>
+        <input type="text" name="productId" value="${sessionScope.product.id}" readonly></br>
         <fmt:message key="product_name_en"/>
-        <input type="text" name="nameEn" value="${requestScope.product.nameEn}"></br>
+        <input type="text" name="nameEn" value="${sessionScope.product.nameEn}"></br>
         <fmt:message key="product_name_ru"/>
-        <input type="text" name="nameRu" value="${requestScope.product.nameRu}"></br>
+        <input type="text" name="nameRu" value="${sessionScope.product.nameRu}"></br>
         <fmt:message key="country_code"/>
-        <input type="text" name="countryId" value="${requestScope.product.country.id}"></br>
+        <input type="text" name="countryId" value="${sessionScope.product.country.id}"></br>
         <fmt:message key="price"/>
-        <input type="text" name="price" value="${requestScope.product.price}"><br><br>
+        <input type="text" name="price" value="${sessionScope.product.price}"><br><br>
         <input type="submit" value="<fmt:message key="save"/>">
         <input type="hidden" name="command" value="edit_flight">
     </form>
@@ -29,7 +29,7 @@
             <th><fmt:message key="country_name_ru"/></th>
         </tr>
 
-        <c:forEach var="country" items="${requestScope.countriesList}">
+        <c:forEach var="country" items="${sessionScope.countriesList}">
             <tr>
                 <td>
                     <c:out value="${country.id}" />

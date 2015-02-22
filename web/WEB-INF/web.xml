@@ -15,6 +15,11 @@
         <param-value>/META-INF/context.xml</param-value>
     </context-param>
 
+    <context-param>
+        <param-name>log4jConfiguration</param-name>
+        <param-value>log4j2.xml</param-value>
+    </context-param>
+
     <!--Welcome page-->
     <welcome-file-list>
         <welcome-file>/WEB-INF/jsp/home.jsp</welcome-file>
@@ -125,6 +130,15 @@
     <servlet-mapping>
         <servlet-name>order_info</servlet-name>
         <url-pattern>/order_info</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>error</servlet-name>
+        <jsp-file>/WEB-INF/jsp/error.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>error</servlet-name>
+        <url-pattern>/error</url-pattern>
     </servlet-mapping>
 
 </web-app>

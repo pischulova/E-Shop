@@ -16,7 +16,7 @@
             <th><fmt:message key="orders"/></th>
         </tr>
 
-        <c:forEach var="client" items="${requestScope.goodClientsList}">
+        <c:forEach var="client" items="${sessionScope.goodClientsList}">
             <tr>
                 <td><c:out value="${client.id}" /></td>
                 <td><c:out value="${client.name}" /></td>
@@ -45,7 +45,7 @@
             <th><fmt:message key="orders"/></th>
         </tr>
 
-        <c:forEach var="client" items="${requestScope.badClientsList}">
+        <c:forEach var="client" items="${sessionScope.badClientsList}">
             <tr>
                 <td><c:out value="${client.id}" /></td>
                 <td><c:out value="${client.name}" /></td>

@@ -191,7 +191,7 @@ public class DaoFlight {
         return list;
     }
 
-    public void editFlight(String nameEn, String nameRu, int countryId, int price, int flightId) {
+    public boolean editFlight(String nameEn, String nameRu, int countryId, int price, int flightId) {
         try {
             PreparedStatement statement = connection.prepareStatement(EDIT_FLIGHT);
             statement.setString(1, nameEn);
@@ -200,8 +200,10 @@ public class DaoFlight {
             statement.setInt(4, price);
             statement.setInt(5, flightId);
             statement.executeUpdate();
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return false;
     }
 }

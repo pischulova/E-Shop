@@ -53,8 +53,9 @@
         </c:when>
         <c:otherwise>
             <c:choose>
-                <c:when test="${requestScope.orderSent=='true'}">
+                <c:when test="${sessionScope.orderSent=='true'}">
                     <fmt:message key="order_sent"/>
+                    <c:remove var="orderSent" scope="session"/>
                 </c:when>
                 <c:otherwise>
                     <fmt:message key="cart_empty"/>

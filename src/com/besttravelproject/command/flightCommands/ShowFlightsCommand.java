@@ -5,10 +5,9 @@ import com.besttravelproject.dao.DaoFactory;
 import com.besttravelproject.dao.DaoFlight;
 import com.besttravelproject.model.Product;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
@@ -21,6 +20,7 @@ public class ShowFlightsCommand implements Command {
     public void execute(HttpServletRequest request, HttpServletResponse response) {
         String country = request.getParameter("country");
         String city = request.getParameter("city");
+        HttpSession session = request.getSession();
         try {
             DaoFlight daoFlight = DaoFactory.getDaoFlight();
             List<Product> flights;
@@ -31,13 +31,10 @@ public class ShowFlightsCommand implements Command {
             } else {
                 flights = daoFlight.findAll();
             }
-            request.setAttribute("flightsList", flights);
+            session.setAttribute("flightsList", flights);
             DaoFactory.closeDaoFlight(daoFlight);
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/flights");
-            requestDispatcher.forward(request, response);
+            response.sendRedirect("/flights");
 
-        } catch (ServletException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (SQLException e) {

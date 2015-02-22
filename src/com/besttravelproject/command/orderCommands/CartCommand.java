@@ -6,8 +6,6 @@ import com.besttravelproject.dao.DaoFlight;
 import com.besttravelproject.model.Product;
 import com.besttravelproject.model.User;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -51,14 +49,10 @@ public class CartCommand implements Command {
         }
         user.setCart(cart);
         session.setAttribute("user", user);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/cart.jsp");
         try {
-            requestDispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
+            response.sendRedirect("/cart");
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

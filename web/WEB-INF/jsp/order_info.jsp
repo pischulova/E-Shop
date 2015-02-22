@@ -34,7 +34,7 @@
             <th><fmt:message key="country"/></th>
             <th><fmt:message key="price"/></th>
         </tr>
-        <c:forEach var="product" items="${requestScope.orderContents}">
+        <c:forEach var="product" items="${sessionScope.orderContents}">
             <tr>
                 <td><c:out value="${product.name}"/></td>
                 <td><c:out value="${product.country.name}"/></td>

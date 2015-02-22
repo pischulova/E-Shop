@@ -33,7 +33,7 @@
 
 <ul id="side">
     <li><a href="/profile"><fmt:message key="profile"/></a></li>
-    <li><a href="javascript:document.orders.submit();"><fmt:message key="orders"/></a>
+    <li><a href="javascript:document.orders.submit();"><fmt:message key="my_orders"/></a>
         <form action="/auth" method="POST" name="orders">
             <input type="hidden" name="command" value="show_orders"></form>
     </li>

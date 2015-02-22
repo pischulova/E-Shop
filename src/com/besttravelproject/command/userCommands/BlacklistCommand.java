@@ -23,6 +23,7 @@ public class BlacklistCommand implements Command {
             DaoUser daoUser = DaoFactory.getDaoUser();
             daoUser.changeClientStatus(clientId, action);
             DaoFactory.closeDaoUser(daoUser);
+
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/auth?command=show_clients");
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {

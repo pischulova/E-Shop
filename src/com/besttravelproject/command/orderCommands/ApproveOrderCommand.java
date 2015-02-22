@@ -22,6 +22,7 @@ public class ApproveOrderCommand implements Command {
             DaoOrder daoOrder = DaoFactory.getDaoOrder();
             daoOrder.approveOrder(orderId);
             DaoFactory.closeDaoOrder(daoOrder);
+
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/auth?command=show_orders");
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {

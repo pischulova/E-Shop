@@ -6,8 +6,6 @@ import com.besttravelproject.dao.DaoOrder;
 import com.besttravelproject.model.Product;
 import com.besttravelproject.model.User;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -25,27 +23,25 @@ public class AddOrderCommand implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) {
         int sum = Integer.parseInt(request.getParameter("sum"));
+        Date date = new Date(Calendar.getInstance().getTimeInMillis());
+
         HttpSession session = request.getSession();
         User user = (User)session.getAttribute("user");
         int clientId = user.getId();
-        Date date = new Date(Calendar.getInstance().getTimeInMillis());
         List<Product> cart = user.getCart();
         try {
             DaoOrder daoOrder = DaoFactory.getDaoOrder();
             boolean success = daoOrder.addOrder(clientId, date, cart, sum);
             if (success) {
-                request.setAttribute("orderSent", "true");
+                session.setAttribute("orderSent", "true");
             }
             cart = new ArrayList<>();
             user.setCart(cart);
             DaoFactory.closeDaoOrder(daoOrder);
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/cart.jsp");
-            requestDispatcher.forward(request, response);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }catch (ServletException e) {
-            e.printStackTrace();
+            response.sendRedirect("/cart");
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 

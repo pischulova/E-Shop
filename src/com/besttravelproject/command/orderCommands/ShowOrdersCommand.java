@@ -8,8 +8,6 @@ import com.besttravelproject.model.Order;
 import com.besttravelproject.model.Product;
 import com.besttravelproject.model.User;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -27,10 +25,11 @@ public class ShowOrdersCommand implements Command {
         HttpSession session = request.getSession();
         String isAdmin = (String)session.getAttribute("isAdmin");
         String orderId = request.getParameter("orderId");
+        DaoOrder daoOrder = null;
+        DaoFlight daoFlight = null;
         try {
-            DaoOrder daoOrder = DaoFactory.getDaoOrder();
-            DaoFlight daoFlight = DaoFactory.getDaoFlight();
-            RequestDispatcher requestDispatcher;
+            daoOrder = DaoFactory.getDaoOrder();
+            daoFlight = DaoFactory.getDaoFlight();
             if (orderId != null) {
                 int id = Integer.parseInt(orderId);
                 Order order = daoOrder.findOrderInfo(id);
@@ -40,9 +39,9 @@ public class ShowOrdersCommand implements Command {
                     int productId = p.getId();
                     orderContents.add(daoFlight.findProductInfoLang(productId));
                 }
-                request.setAttribute("order", order);
-                request.setAttribute("orderContents", orderContents);
-                requestDispatcher = request.getRequestDispatcher("/order_info");
+                session.setAttribute("order", order);
+                session.setAttribute("orderContents", orderContents);
+                response.sendRedirect("/order_info");
             } else {
                 List<Order> list;
                 if (isAdmin.equals("true")) {
@@ -52,18 +51,16 @@ public class ShowOrdersCommand implements Command {
                     int clientId = user.getId();
                     list = daoOrder.findClientsOrders(clientId);
                 }
-                request.setAttribute("ordersList", list);
-                requestDispatcher = request.getRequestDispatcher("/orders");
+                session.setAttribute("ordersList", list);
+                response.sendRedirect("/orders");
             }
-            DaoFactory.closeDaoFlight(daoFlight);
-            DaoFactory.closeDaoOrder(daoOrder);
-            requestDispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            DaoFactory.closeDaoFlight(daoFlight);
+            DaoFactory.closeDaoOrder(daoOrder);
         }
     }
 }

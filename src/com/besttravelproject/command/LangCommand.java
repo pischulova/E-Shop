@@ -1,7 +1,5 @@
 package com.besttravelproject.command;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -26,13 +24,17 @@ public class LangCommand implements Command {
         HttpSession session = request.getSession(true);
         session.setAttribute("userLocale", locale);
         Locale.setDefault(locale);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/home");
         try {
-            dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
+            response.sendRedirect(getLastPage(request));
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private String getLastPage(HttpServletRequest request) {
+        String [] url = request.getHeader("referer").split("/");
+        if (url.length < 4)
+            return "/home";
+        return ("/"+ url[url.length-1]);
     }
 }

@@ -13,9 +13,9 @@ import java.util.*;
 public class CommandFactory {
     private static Map<String, Command> commands = new HashMap<String, Command>();
     static{
+        commands.put("error", new ErrorCommand());
         commands.put("authorization", new AuthCommand());
         commands.put("logout", new LogoutCommand());
-        commands.put("default", new DefaultCommand());
         commands.put("language", new LangCommand());
         commands.put("show_flights", new ShowFlightsCommand());
         commands.put("find_flight", new FindFlightCommand());
@@ -57,7 +57,7 @@ public class CommandFactory {
                 case "approve_order":
                     return commands.get("approve_order");
                 default:
-                    return commands.get("default");
+                    return commands.get("error");
             }
         }
         return commands.get("bad");

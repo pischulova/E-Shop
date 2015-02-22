@@ -19,7 +19,7 @@
                     <th><fmt:message key="status"/></th>
                 </tr>
 
-                <c:forEach var="order" items="${requestScope.ordersList}">
+                <c:forEach var="order" items="${sessionScope.ordersList}">
                     <tr>
                         <td><c:out value="${order.id}"/></td>
                         <td><c:out value="${order.date}"/></td>
@@ -40,7 +40,7 @@
 
         <c:when test="${sessionScope.isAdmin=='false'}">
             <c:choose>
-                <c:when test="${empty requestScope.ordersList}">
+                <c:when test="${empty sessionScope.ordersList}">
                     <fmt:message key="no_orders"/>
                 </c:when>
 
@@ -53,7 +53,7 @@
                             <th><fmt:message key="status"/></th>
                         </tr>
 
-                        <c:forEach var="order" items="${requestScope.ordersList}">
+                        <c:forEach var="order" items="${sessionScope.ordersList}">
                             <tr>
                                 <td><c:out value="${order.id}"/></td>
                                 <td><c:out value="${order.date}"/></td>

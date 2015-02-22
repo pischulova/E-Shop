@@ -1,12 +1,10 @@
 package com.besttravelproject.command.userCommands;
 
-import com.besttravelproject.command.Command;
+        import com.besttravelproject.command.Command;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+        import javax.servlet.http.HttpServletRequest;
+        import javax.servlet.http.HttpServletResponse;
+        import java.io.IOException;
 
 /**
  * Created by А on 13.02.15.
@@ -14,12 +12,9 @@ import java.io.IOException;
 public class LogoutCommand implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) {
-        request.getSession().invalidate();
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/home");
         try {
-            requestDispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
+            request.getSession().invalidate();
+            response.sendRedirect("/home");
         } catch (IOException e) {
             e.printStackTrace();
         }

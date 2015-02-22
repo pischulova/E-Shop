@@ -6,11 +6,12 @@
 <%@include file="/WEB-INF/layout/header.jsp"%>
 <%@include file="/WEB-INF/layout/menu.jsp"%>
 <div class="center">
-    <form action="/auth?command=${"login"}" method="post">
+    <form action="/auth" method="post">
     <fmt:message key="name"/>
     <input type="text" name="name" required><br/>
     <fmt:message key="pass"/>
     <input type="text" name="pass" required><br/>
+    <input type="hidden" name="command" value="login">
     <input type="submit" value="ok">
     </form>
 </div>
